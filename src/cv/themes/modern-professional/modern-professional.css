@@ -1,0 +1,518 @@
+/* ===== Base Layout ===== */
+
+.modern-professional:has(.content.mobile.hidden) {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+
+.modern-professional .header {
+  padding: 40px 48px 32px;
+  border-bottom: 3px solid #1a1a1a;
+}
+
+.modern-professional .header h1 {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.modern-professional .header h2 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  margin: 8px 0 0 0;
+  color: #555;
+}
+
+/* ===== Two-Column Layout (Desktop) ===== */
+
+.modern-professional .content.desktop {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 600px;
+}
+
+/* ===== Sidebar (Left Column) ===== */
+
+.modern-professional .content.desktop .sidebar {
+  background: #f8f8f8;
+  padding: 0;
+}
+
+.modern-professional .content.desktop .sidebar * {
+  min-width: 0;
+  /* REQUIRED for flex text wrapping */
+}
+
+.modern-professional .content.desktop .sidebar .section {
+  margin: 0;
+  padding: 20px 22px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.modern-professional .content.desktop .sidebar .section h3 {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 16px 0;
+  padding: 12px 16px;
+  background: #1a1a1a;
+  color: white;
+  margin: -20px -22px 20px;
+}
+
+/* Contact in sidebar */
+.modern-professional .content.desktop .sidebar .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modern-professional .content.desktop .sidebar .contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.modern-professional .content.desktop .sidebar .contact-row svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.modern-professional .content.desktop .sidebar .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.modern-professional .content.desktop .sidebar .contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: inherit;
+}
+
+.modern-professional .content.desktop .sidebar .contact-link:hover {
+  color: #1a1a1a;
+}
+
+.modern-professional .content.desktop .sidebar .contact-link svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Skills in sidebar */
+.modern-professional .content.desktop .sidebar .section>div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.modern-professional .content.desktop .sidebar .section>div:last-child {
+  margin-bottom: 0;
+}
+
+.modern-professional .content.desktop .sidebar .section.skills>div::before {
+  content: '☑';
+  font-size: 16px;
+  color: #1a1a1a;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.modern-professional .content.desktop .sidebar .section>div strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Education in sidebar */
+.modern-professional .content.desktop .sidebar .section>div strong {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.modern-professional .content.desktop .sidebar .section>div>div[style*="color"] {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0 4px 0;
+}
+
+.modern-professional .content.desktop .sidebar .section>div>p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+/* Remove checkbox from education items */
+.modern-professional .content.desktop .sidebar .section>div:has(strong):has(div[style*="color"])::before {
+  content: none;
+}
+
+.modern-professional .content.desktop .sidebar .section>div:has(strong):has(div[style*="color"]) {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* ===== Main Content (Right Column) ===== */
+
+.modern-professional .content.desktop .main-content {
+  padding: 32px 40px 48px;
+}
+
+.modern-professional .content.desktop .main-content .section {
+  margin-bottom: 36px;
+}
+
+.modern-professional .content.desktop .main-content .section:last-child {
+  margin-bottom: 0;
+}
+
+.modern-professional .content.desktop .main-content .section h3 {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.modern-professional .content.desktop .main-content .section p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+.modern-professional .content.desktop .main-content .section>div {
+  margin-bottom: 24px;
+}
+
+.modern-professional .content.desktop .main-content .section>div:last-child {
+  margin-bottom: 0;
+}
+
+.modern-professional .content.desktop .main-content .section>div>span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.modern-professional .content.desktop .main-content .section>div>span>strong {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.modern-professional .content.desktop .main-content .section>div>div[style*="color"] {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.modern-professional .content.desktop .main-content .section>div>p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.modern-professional .content.desktop .main-content .section>div strong a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.2s;
+}
+
+.modern-professional .content.desktop .main-content .section>div strong a:hover {
+  border-bottom-color: #1a1a1a;
+}
+
+/* ===== Mobile Layout (Single Column) ===== */
+
+.modern-professional .content.mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Sections become stacked document blocks, not cards */
+.modern-professional .content.mobile .section {
+  margin: 0;
+  padding: 24px 24px 28px;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modern-professional .content.mobile .section:last-child {
+  border-bottom: none;
+}
+
+/* Mobile headers now mirror sidebar boldness */
+.modern-professional .content.mobile .section h3 {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: -24px -24px 20px;
+  padding: 12px 20px;
+  background: #1a1a1a;
+  color: white;
+  border-bottom: none;
+}
+
+/* ===== Mobile: Contact details ===== */
+
+.modern-professional .content.mobile .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modern-professional .content.mobile .contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.modern-professional .content.mobile .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.modern-professional .content.mobile .contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Mobile: Skills / checklist styling ===== */
+
+.modern-professional .content.mobile .section>div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modern-professional .content.mobile .section.skills>div {
+  align-items: center;
+}
+
+.modern-professional .content.mobile .section>div:last-child {
+  margin-bottom: 0;
+}
+
+.modern-professional .content.mobile .section.skills>div::before {
+  content: '☑';
+  font-size: 18px;
+  color: #1a1a1a;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Remove checkbox from experience / education / structured entries */
+.modern-professional .content.mobile .section>div:has(strong):has(div[style*="color"])::before {
+  content: none;
+}
+
+.modern-professional .content.mobile .section>div:has(strong):has(div[style*="color"]) {
+  display: block;
+}
+
+/* ===== Mobile: Projects ===== */
+
+.modern-professional .content.mobile .section.projects>div {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.modern-professional .content.mobile .section.projects p {
+  margin: 0;
+}
+
+/* ===== Visibility helpers ===== */
+
+.modern-professional .content.hidden {
+  display: none;
+}
+
+
+/* ===== Print Styles ===== */
+
+@media print {
+
+  html:has(.modern-professional),
+  body:has(.modern-professional) {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  .modern-professional {
+    max-width: none;
+    margin: 0 !important;
+    padding: 0;
+    background: white;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modern-professional .header {
+    padding: 30px 40px 20px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+
+  .modern-professional .content.desktop {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    flex: 1;
+  }
+
+  .modern-professional .content.desktop .sidebar {
+    background: #f8f8f8;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+
+  .modern-professional .content.desktop .sidebar .section {
+    padding: 20px 24px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .modern-professional .content.desktop .sidebar .section h3 {
+    background: #1a1a1a;
+    color: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: -20px;
+    margin-bottom: 16px;
+    padding: 10px 16px;
+  }
+
+  .modern-professional .content.desktop .main-content {
+    padding: 24px 32px 32px;
+  }
+
+  .modern-professional .content.desktop .main-content .section {
+    margin-bottom: 20px;
+  }
+
+  .modern-professional .content.desktop .main-content .section h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .modern-professional .content.desktop .main-content .section h3+* {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  .modern-professional .content.desktop .main-content .section>div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  .modern-professional .content.desktop .main-content .section:last-child {
+    flex: 1;
+  }
+
+  .modern-professional .content.desktop .main-content p {
+    line-height: 1.5;
+  }
+
+  .modern-professional a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .modern-professional .content.desktop .sidebar .section>div {
+    margin-bottom: 8px;
+  }
+
+  .modern-professional .content.desktop .sidebar .contact-row,
+  .modern-professional .content.desktop .sidebar .contact-link {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .modern-professional .content.desktop .sidebar .contact-link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "svg text"
+      "link link";
+    gap: 2px 10px;
+  }
+
+  .modern-professional .content.desktop .sidebar .contact-link::after {
+    content: attr(href);
+    font-size: 11px;
+    color: #666;
+    word-break: break-all;
+    grid-area: link;
+  }
+
+  .modern-professional .content.desktop .sidebar .section>div::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide mobile layout in print */
+  .modern-professional .content.mobile {
+    display: none;
+  }
+    .modern-professional .content.desktop {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    flex: 1;
+  }
+}

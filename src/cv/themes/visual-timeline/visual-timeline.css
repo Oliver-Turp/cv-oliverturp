@@ -1,0 +1,403 @@
+/* ===== Base Layout ===== */
+
+.visual-timeline {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 48px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Header ===== */
+
+.visual-timeline .header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.visual-timeline .header h1 {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.visual-timeline .header h2 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Content Area ===== */
+
+.visual-timeline .content {
+  padding: 0;
+}
+
+/* ===== Sections ===== */
+
+.visual-timeline .section {
+  margin-bottom: 36px;
+}
+
+.visual-timeline .section:last-child {
+  margin-bottom: 0;
+}
+
+.visual-timeline .section h3 {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  padding-bottom: 8px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.visual-timeline .section p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #333;
+}
+
+.visual-timeline .section:not(.experience)>div>div[style*="color"] {
+  font-size: 13px;
+  color: #666;
+  margin: 4px 0 6px 0;
+}
+
+/* ===== Timeline Items (Experience ONLY) ===== */
+
+/* Default: NO timeline for any section */
+.visual-timeline .section>div {
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.visual-timeline .section>div:last-child {
+  margin-bottom: 0;
+}
+
+.visual-timeline .section>div>p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 8px 0 0 0;
+}
+
+/* Timeline ONLY for experience section (assuming it's the first section with timeline) */
+/* You can target by section order or add a class to the experience section */
+.visual-timeline .section.experience:has(div > div[style*="color"])>div {
+  padding-left: 40px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+}
+
+.visual-timeline .section.experience:has(div > div[style*="color"])>div:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline line - ONLY for experience */
+.visual-timeline .section.experience:has(div > div[style*="color"])>div::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: -32px;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.visual-timeline .section.experience:has(div > div[style*="color"])>div:last-child::before {
+  bottom: 0px;
+}
+
+/* Timeline dot - ONLY for experience */
+.visual-timeline .section.experience:has(div > div[style*="color"])>div::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #2c5282;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #2c5282;
+}
+
+/* Date styling - shown FIRST in experience items */
+.visual-timeline .section.experience>div>div[style*="color"]:first-of-type {
+  grid-area: date;
+  font-size: 18px !important;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #000 !important;
+  margin-bottom: 6px;
+  margin-top: 4px;
+}
+
+/* ===== Experience layout override (Visual Timeline) ===== */
+
+.visual-timeline .section.experience>div {
+  display: grid;
+  grid-template-areas:
+    "date"
+    "title"
+    "description";
+  row-gap: 8px;
+}
+
+
+/* Title/Role styling */
+.visual-timeline .section>div strong {
+  display: inline;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+/* Description paragraph */
+.visual-timeline .section.experience>div>p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 0px;
+}
+
+/* ===== Contact Section ===== */
+
+.visual-timeline .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.visual-timeline .contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.visual-timeline .contact-row svg {
+  flex-shrink: 0;
+}
+
+.visual-timeline .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 8px;
+}
+
+.visual-timeline .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #2c5282;
+  transition: color 0.2s;
+}
+
+.visual-timeline .contact-link:hover {
+  color: #1a365d;
+}
+
+/* ===== Projects Section ===== */
+
+.visual-timeline .section>div strong a {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+  font-size: 16px;
+}
+
+.visual-timeline .section>div strong a:hover {
+  color: #1a365d;
+}
+
+/* ===== Mobile Adaptation ===== */
+
+@media (max-width: 800px) {
+  body:has(.visual-timeline) {
+    background: white;
+  }
+
+  .visual-timeline {
+    margin: 0;
+    padding: 32px 20px;
+    box-shadow: none;
+  }
+
+  .visual-timeline .header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+  }
+
+  .visual-timeline .header h1 {
+    font-size: 28px;
+  }
+
+  .visual-timeline .header h2 {
+    font-size: 13px;
+  }
+
+  .visual-timeline .section {
+    margin-bottom: 36px;
+  }
+
+  .visual-timeline .section>div {
+    padding-left: 32px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+  }
+
+  .visual-timeline .section>div::before {
+    left: 9px;
+    bottom: -28px;
+  }
+
+  .visual-timeline .section>div::after {
+    left: 4px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ===== Print Styles ===== */
+
+@media print {
+
+  html:has(.visual-timeline),
+  body:has(.visual-timeline) {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  .visual-timeline {
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: white;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .visual-timeline .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .visual-timeline .section {
+    margin: 12px 0;
+  }
+
+  /* Prevent headers from being separated from their content */
+  .visual-timeline .section h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+    letter-spacing: 0.75px;
+  }
+
+  /* Keep section heading with first item */
+  .visual-timeline .section h3+* {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* Make the last section stretch to fill remaining space */
+  .visual-timeline .section:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Keep timeline items together */
+  .visual-timeline .section>div {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    gap: 0;
+  }
+
+  .visual-timeline .section.experience>div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure timeline dots print correctly */
+  .visual-timeline .section>div::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .visual-timeline .section>div::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Tighter typography for print */
+  .visual-timeline .section p {
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+
+  .visual-timeline a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Stack contact info vertically in print */
+  .visual-timeline .contact-details {
+    margin-bottom: 0;
+  }
+
+  .visual-timeline .contact-row {
+    margin-bottom: 6px;
+  }
+
+  .visual-timeline .contact-links {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .visual-timeline .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .visual-timeline .contact-link svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+  }
+
+  .visual-timeline .section.experience:has(div > div[style*="color"])>div {
+    margin-bottom: 8px;
+    padding-bottom: 16px;
+  }
+}
