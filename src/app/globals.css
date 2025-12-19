@@ -20,10 +20,19 @@ p {
   line-height: 1.6;
 }
 
+.label {
+  position: absolute;
+  left: -9999px;
+}
+
 @media print {
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  .contact-link span:last-of-type {
+    display: none;
   }
 
   /* Show URLs in print for projects */
@@ -32,5 +41,21 @@ p {
     font-size: 11px;
     color: #666;
     font-weight: normal;
+  }
+
+  .label {
+    position: static;
+    left: auto;
+    display: inline;
+    font-weight: bold;
+    margin-right: 4px;
+  }
+
+  svg, .section.skills>div::before {
+    display: none !important;
+  }
+
+  .contact-link svg {
+    display: none !important;
   }
 }

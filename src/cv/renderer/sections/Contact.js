@@ -9,6 +9,7 @@ export default function Contact({ heading, data }) {
         {data.email && (
           <div className="contact-row">
             <Icons.email />
+            <span className="label">Email: </span>
             <span>{data.email}</span>
           </div>
         )}
@@ -16,6 +17,7 @@ export default function Contact({ heading, data }) {
         {data.phone && (
           <div className="contact-row">
             <Icons.phone />
+            <span className="label">Phone: </span>
             <span>{data.phone}</span>
           </div>
         )}
@@ -23,6 +25,7 @@ export default function Contact({ heading, data }) {
         {data.location && (
           <div className="contact-row">
             <Icons.location />
+            <span className="label">Location: </span>
             <span>{data.location}</span>
           </div>
         )}
@@ -42,6 +45,7 @@ export default function Contact({ heading, data }) {
                 className="contact-link"
               >
                 {Icon && <Icon />}
+                <span className="label">{link.name}: </span>
                 <span>{link.name}</span>
               </a>
             );
