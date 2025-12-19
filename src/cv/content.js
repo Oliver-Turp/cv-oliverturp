@@ -1,10 +1,10 @@
 export const content = {
   name: "Oliver Turp",
-  title: "Insurance Analyst | Underwriting Support | Lloyd’s Market Professional",
+  title: "Aggregation Analyst & Underwriting Assistant",
   sections: {
     about: {
       heading: "Professional Summary",
-      content: "Detail-oriented insurance professional with experience in underwriting support, data reporting, and regulatory compliance within the Lloyd’s market. Background in civil engineering supports a logic-driven, puzzle-solving approach to insurance operations. Known for speed and accuracy in high-volume environments, with a track record of creating Excel-based tools that enhance visibility and support underwriter decision-making. Currently focused on advancing within the London insurance market, particularly in underwriting operations and analytics."
+      content: "Detail-oriented insurance professional who supported underwriting, led data reporting, and ensured regulatory compliance within the Lloyd’s market. Background in civil engineering supports a logic-driven approach, with a track record of enhancing underwriting decision-making through Excel-based tools."
     },
     experience: {
       heading: "Work Experience",
@@ -13,26 +13,26 @@ export const content = {
           role: "Underwriting Assistant (additional duties)",
           company: "Aspen Insurance",
           years: "April 2025 - Present",
-          description: "Support the Upstream Energy team by maintaining electronic submission files and ensuring audit readiness. Process renewal slips in Wordsensa and conduct insured profile reviews using Dun & Bradstreet for due diligence. Assist with ad hoc data tasks to improve workflow efficiency across the team."
+          description: "- Support the Upstream Energy team by maintaining electronic submission files and ensuring audit readiness.\n- Process renewal slips in Wordsensa and conduct insured profile reviews using Dun & Bradstreet\n- Assist with ad hoc data tasks to improve workflow efficiency across the team."
         },
         {
           role: "Aggregation Analyst",
           company: "Aspen Insurance",
           years: "December 2022 - Present",
-          description: "Initially focused on aggregate exposure data entry and integrity checks using the Open Xposure system. Evolved into a reporting-focused role supporting both internal stakeholders and Lloyd’s regulatory submissions. Key responsibilities include:\n- Producing monthly Lloyd’s top exposure and movement analysis to support exposure oversight\n- Delivering quarterly data correlations for internal Exposure Management reporting\n- Compiling bi-annual Realistic Disaster Scenario (RDS) submissions in compliance with Lloyd’s requirements\n- Analysing peak and live risk exposures across the Upstream Energy book to inform underwriting decisions\n- Created an Excel-based Gantt-style dashboard to visualise live construction exposure, adopted by senior management for real-time tracking"
+          description: "- Conduct exposure data entry and integrity checks using the Open Xposure system.\n- Produce monthly Lloyd's top exposure and movement analysis.\n- Deliver quarterly data correlations for internal Exposure Management.\n- Compile bi-annual Realistic Disaster Scenario (RDS) submissions in compliance with Lloyd's.\n- Analyse peak and live risk exposures to inform underwriting decisions.\n- Created Excel-based Gantt dashboard to visualise construction exposure, adopted by senior management."
         },
         {
           role: "Grants & Programmes Intern",
           company: "Carer's Trust",
           years: "July 2022 - September 2022",
-          description: "Redesigned the structure and layout of the SharePoint intranet platform to improve user experience, page navigation, and access to grants and resources across the organisation. Proposed UX improvements in stakeholder meetings and implemented a full offline draft environment which served as the template for the production system. Performed data cleaning and analysis on financial and grant data to support quarterly summaries and business development insights. Provided administrative support for event planning and managed aspects of grant distribution logistics."
+          description: "\n- Redesigned the SharePoint intranet platform to improve navigation and access (UI/UX).\n- Proposed UX improvements in stakeholder meetings and built an offline draft environment.\n- Performed data cleaning and analysis on financial and grant data. \n- Supported event planning and managed aspects of grant distribution logistics."
         },
-        {
-          role: "Previous Experience",
-          company: "Various Roles",
-          years: "2015 - 2022",
-          description: "- Assistant Manager, ShakeTastic\n- Department Leader, LIDL\n- Sales Assistant, Card Factory\n- Sales Assistant & Technical Advisor, Toys R Us\n- Catering Assistant, Three Crowns Pub"
-        },
+        // {
+        //   role: "Previous Experience",
+        //   company: "Various Roles",
+        //   years: "2015 - 2022",
+        //   description: "- Assistant Manager, ShakeTastic\n- Department Leader, LIDL\n- Sales Assistant, Card Factory\n- Sales Assistant & Technical Advisor, Toys R Us\n- Catering Assistant, Three Crowns Pub"
+        // },
       ]
     },
     education: {
@@ -55,7 +55,6 @@ export const content = {
             "Microsoft Excel",
             "Data Management",
             "Open Xposure",
-            "Data Management",
             "Regulatory Reporting",
           ]
         },
@@ -114,11 +113,7 @@ export const content = {
         {
           name: "Video Games",
           description: "Avid PC gamer!"
-        },
-        {
-          name: "CPD",
-          description: "Lifelong learner, currently pursuing further CII qualifications in insurance."
-        },
+        }
       ]
     },
     contact: {

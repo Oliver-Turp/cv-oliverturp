@@ -42,8 +42,8 @@ export const config = {
 
   // Two-column layout config (replaces sectionOrder for this theme)
   columns: {
-    sidebar: ["contact", "skills", "education", "certifications", "interests"],
-    main: ["about", "experience"],
+    sidebar: ["contact", "skills", "education", "certifications"],
+    main: ["about", "experience", "interests"],
     mobile: [
       "about",
       "experience",

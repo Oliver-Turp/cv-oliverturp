@@ -6,9 +6,13 @@ export default function Certifications({ heading, data }) {
       {data.items.map((cert, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
           <strong>
-            <a href={cert.url} target="_blank" rel="noopener noreferrer">
-              {cert.name}
-            </a>
+            {cert.url ? (
+              <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                {cert.name}
+              </a>
+            ) : (
+              cert.name
+            )}
           </strong>
           <div style={{ fontSize: "14px", color: "#666", marginTop: "4px" }}>
             {cert.issuer} • {cert.year}
