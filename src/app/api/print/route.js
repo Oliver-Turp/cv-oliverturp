@@ -1,6 +1,7 @@
 // app/api/print/route.js
 import puppeteer from 'puppeteer';
 import { NextResponse } from 'next/server';
+import { content } from '../../../cv/content';
 
 export async function GET(request) {
   let browser;
@@ -51,11 +52,17 @@ export async function GET(request) {
 
     await browser.close();
 
+    // Create filename from name (replace spaces with underscores, remove special chars)
+    const sanitizedName = content.name
+      .replace(/\s+/g, '_')
+      .replace(/[^a-zA-Z0-9_-]/g, '');
+    const filename = `${sanitizedName}_CV.pdf`;
+
     // Return PDF
     return new NextResponse(pdf, {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="Oliver_Turp_CV.pdf"'
+        'Content-Disposition': `attachment; filename="${filename}"`
       }
     });
 
