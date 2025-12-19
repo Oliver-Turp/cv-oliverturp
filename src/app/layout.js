@@ -14,7 +14,8 @@ const sans = Inter({
 });
 
 export const metadata = {
-    title: "Curriculum Vitae"
+    title: "Curriculum Vitae",
+    description: "The curriculum vitae of Oliver Turp, an Aggregation Analyst based in the UK."
 };
 
 export default function RootLayout({ children }) {

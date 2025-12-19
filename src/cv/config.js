@@ -5,10 +5,7 @@
 //     "experience",
 //     "education",
 //     "skills",
-//     "projects",
-//     "publications",
 //     "certifications",
-//     "awards",
 //     "contact"
 //   ]
 // };
@@ -21,10 +18,7 @@
 //     "experience",
 //     "education",
 //     "skills",
-//     "projects",
-//     "publications",
 //     "certifications",
-//     "awards"
 //   ]
 // };
 
@@ -35,7 +29,7 @@
 //     "experience",
 //     "education",
 //     "skills",
-//     "projects",
+//     "certifications",
 //     "contact"
 //   ]
 // };
@@ -45,8 +39,16 @@ export const config = {
 
   // Two-column layout config (replaces sectionOrder for this theme)
   columns: {
-    sidebar: ["contact", "skills", "education"],
-    main: ["about", "experience", "projects"],
-    mobile: ["about", "contact", "experience", "skills", "education", "projects"]
+    sidebar: ["contact", "skills", "education", "certifications", "interests"],
+    main: ["about", "experience"],
+    mobile: [
+      "about",
+      "experience",
+      "education",
+      "skills",
+      "certifications",
+      "interests",
+      "contact"
+    ]
   }
 };

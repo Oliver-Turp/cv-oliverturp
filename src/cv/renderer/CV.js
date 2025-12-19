@@ -6,7 +6,7 @@ import { content } from "../content";
 import Section from "./Section";
 
 import MinimalistLayout from "../themes/minimalist/MinimalistLayout";
-import BoldHeaderLayout from "../themes/bold-header/Bolder-HeaderLayout";
+import BoldHeaderLayout from "../themes/bold-header/Bold-HeaderLayout";
 import VisualTimelineLayout from "../themes/visual-timeline/VisualTimelineLayout";
 import ModernProfessionalLayout from "../themes/modern-professional/ModernProfessionalLayout";
 

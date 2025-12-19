@@ -1,54 +1,48 @@
 export const content = {
-  name: "Alex J. Morgan",
-  title: "Senior Software Engineer & Technical Architect",
+  name: "Oliver Turp",
+  title: "Insurance Analyst | Underwriting Support | Lloyd’s Market Professional",
   sections: {
     about: {
-      heading: "About Me",
-      content: "I'm a passionate software engineer with over 10 years of experience building scalable applications and leading development teams. Specializing in full-stack development with expertise in JavaScript/TypeScript, React, Node.js, and cloud architecture. I enjoy solving complex technical challenges and mentoring junior developers. When not coding, I contribute to open-source projects and speak at tech conferences."
+      heading: "Professional Summary",
+      content: "Detail-oriented insurance professional with experience in underwriting support, data reporting, and regulatory compliance within the Lloyd’s market. Background in civil engineering supports a logic-driven, puzzle-solving approach to insurance operations. Known for speed and accuracy in high-volume environments, with a track record of creating Excel-based tools that enhance visibility and support underwriter decision-making. Currently focused on advancing within the London insurance market, particularly in underwriting operations and analytics."
     },
     experience: {
       heading: "Work Experience",
       items: [
         {
-          role: "Lead Software Engineer",
-          company: "TechNova Solutions",
-          years: "2020 - Present",
-          description: "Lead a team of 8 engineers developing enterprise SaaS applications. Architected and implemented microservices architecture that improved system scalability by 300%. Established CI/CD pipelines reducing deployment time by 70%. Implemented code quality standards that decreased production bugs by 45%."
+          role: "Underwriting Assistant (additional duties)",
+          company: "Aspen Insurance",
+          years: "April 2025 - Present",
+          description: "Support the Upstream Energy team by maintaining electronic submission files and ensuring audit readiness. Process renewal slips in Wordsensa and conduct insured profile reviews using Dun & Bradstreet for due diligence. Assist with ad hoc data tasks to improve workflow efficiency across the team."
         },
         {
-          role: "Senior Software Developer",
-          company: "DataFlow Systems",
-          years: "2017 - 2020",
-          description: "Developed real-time data processing applications handling 10TB+ daily. Designed and built React-based dashboard used by 50,000+ customers. Optimized database queries resulting in 60% performance improvement. Mentored junior developers and conducted technical interviews."
+          role: "Aggregation Analyst",
+          company: "Aspen Insurance",
+          years: "December 2022 - Present",
+          description: "Initially focused on aggregate exposure data entry and integrity checks using the Open Xposure system. Evolved into a reporting-focused role supporting both internal stakeholders and Lloyd’s regulatory submissions. Key responsibilities include:\n- Producing monthly Lloyd’s top exposure and movement analysis to support exposure oversight\n- Delivering quarterly data correlations for internal Exposure Management reporting\n- Compiling bi-annual Realistic Disaster Scenario (RDS) submissions in compliance with Lloyd’s requirements\n- Analysing peak and live risk exposures across the Upstream Energy book to inform underwriting decisions\n- Created an Excel-based Gantt-style dashboard to visualise live construction exposure, adopted by senior management for real-time tracking"
         },
         {
-          role: "Full Stack Developer",
-          company: "Innovate Web Solutions",
-          years: "2014 - 2017",
-          description: "Built responsive web applications and e-commerce platforms for clients across various industries. Implemented payment processing solutions that handled $2M+ in annual transactions. Developed custom CMS solutions that improved client workflow efficiency by 40%."
+          role: "Grants & Programmes Intern",
+          company: "Carer's Trust",
+          years: "July 2022 - September 2022",
+          description: "Redesigned the structure and layout of the SharePoint intranet platform to improve user experience, page navigation, and access to grants and resources across the organisation. Proposed UX improvements in stakeholder meetings and implemented a full offline draft environment which served as the template for the production system. Performed data cleaning and analysis on financial and grant data to support quarterly summaries and business development insights. Provided administrative support for event planning and managed aspects of grant distribution logistics."
         },
         {
-          role: "Junior Developer",
-          company: "Bright Digital Agency",
-          years: "2012 - 2014",
-          description: "Developed front-end interfaces for client websites using HTML5, CSS3, and JavaScript. Collaborated with design team to implement pixel-perfect UIs. Assisted in transitioning legacy systems to modern frameworks."
-        }
+          role: "Previous Experience",
+          company: "Various Roles",
+          years: "2015 - 2022",
+          description: "- Assistant Manager, ShakeTastic\n- Department Leader, LIDL\n- Sales Assistant, Card Factory\n- Sales Assistant & Technical Advisor, Toys R Us\n- Catering Assistant, Three Crowns Pub"
+        },
       ]
     },
     education: {
       heading: "Education",
       items: [
         {
-          degree: "Master of Science in Computer Science",
-          institution: "Stanford University",
-          years: "2010 - 2012",
-          description: "Specialized in Artificial Intelligence and Distributed Systems. Thesis: 'Efficient Algorithms for Distributed Data Processing'."
-        },
-        {
-          degree: "Bachelor of Science in Computer Engineering",
-          institution: "University of Michigan",
-          years: "2006 - 2010",
-          description: "Graduated with honors. Member of ACM student chapter. Participated in national programming competitions."
+          degree: "Bachelor of Civil Engineering",
+          institution: "University of Hertfordshire",
+          years: "2018 - 2022",
+          description: "Graduated with Upper Second Class Honours (2:1)"
         }
       ]
     },
@@ -56,138 +50,87 @@ export const content = {
       heading: "Skills & Expertise",
       categories: [
         {
-          name: "Programming Languages",
-          skills: ["JavaScript/TypeScript", "Python", "Java", "Go", "SQL", "HTML/CSS"]
+          name: "Technical Skills",
+          skills: [
+            "Microsoft Excel",
+            "Data Management",
+            "Open Xposure",
+            "Data Management",
+            "Regulatory Reporting",
+          ]
         },
         {
-          name: "Frameworks & Libraries",
-          skills: ["React", "Node.js", "Express", "Next.js", "Django", "Spring Boot"]
+          name: "Insurance Knowledge",
+          skills: [
+            "Lloyd’s Market Compliance",
+            "Underwriting Support",
+            "Exposure Management",
+            "Insurance Administration",
+          ]
         },
         {
-          name: "Tools & Platforms",
-          skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Git", "Jest", "Webpack"]
-        },
-        {
-          name: "Methodologies",
-          skills: ["Agile/Scrum", "TDD", "Microservices", "REST API Design", "GraphQL"]
-        }
-      ]
-    },
-    projects: {
-      heading: "Notable Projects",
-      items: [
-        {
-          name: "DataFlow Analytics Platform",
-          url: "https://github.com/alexmorgan/dataflow-analytics",
-          description: "Real-time data analytics platform processing 100M+ events daily with sub-second latency. Implemented using a microservices architecture with Kafka, Elasticsearch, and React.",
-          technologies: ["React", "Node.js", "Kafka", "Elasticsearch", "AWS"]
-        },
-        {
-          name: "Open Source Monitoring Tool",
-          url: "https://github.com/alexmorgan/openmonitor",
-          description: "Contributed to a popular open-source monitoring solution. Implemented custom alerting mechanisms and visualization dashboards. 1,000+ stars on GitHub.",
-          technologies: ["TypeScript", "Grafana", "Prometheus", "Go"]
-        },
-        {
-          name: "E-commerce Payment Gateway",
-          url: "https://github.com/alexmorgan/secure-payments",
-          description: "Built a secure payment processing system that integrates with multiple payment providers. Features include fraud detection, subscription billing, and detailed transaction reporting.",
-          technologies: ["Node.js", "Express", "MongoDB", "Stripe API", "AWS Lambda"]
-        }
-      ]
-    },
-    publications: {
-      heading: "Publications & Talks",
-      items: [
-        {
-          title: "Scaling Microservices: Lessons from the Trenches",
-          publisher: "IEEE Software Engineering Conference",
-          year: "2021",
-          url: "https://ieeexplore.ieee.org/document/example"
-        },
-        {
-          title: "Effective Strategies for Managing Technical Debt",
-          publisher: "ACM SIGSOFT Symposium",
-          year: "2019",
-          url: "https://dl.acm.org/doi/example"
-        },
-        {
-          title: "Building Resilient Systems: A Practical Approach",
-          publisher: "O'Reilly Media",
-          year: "2018",
-          url: "https://www.oreilly.com/example"
+          name: "Professional Skills",
+          skills: [
+            "Attention to Detail",
+            "Process Improvement",
+            "Team Collaboration",
+            "Stakeholder Communication",
+            "Organisational Efficiency"
+          ]
         }
       ]
     },
     certifications: {
       heading: "Certifications",
       items: [
+        // {
+        //   name: "Level 3 Certificate in London Market Insurance",
+        //   issuer: "Chartered Insurance Institute",
+        //   year: "2026",
+        // },
         {
-          name: "AWS Certified Solutions Architect - Professional",
-          issuer: "Amazon Web Services",
-          year: "2022",
-          url: "https://www.credly.com/example"
+          name: "Level 3 Award in London Market Insurance",
+          issuer: "Chartered Insurance Institute",
+          year: "2024",
         },
         {
-          name: "Google Cloud Professional Data Engineer",
-          issuer: "Google Cloud",
-          year: "2021",
-          url: "https://www.credential.net/example"
-        },
-        {
-          name: "Certified Kubernetes Administrator (CKA)",
-          issuer: "Cloud Native Computing Foundation",
-          year: "2020",
-          url: "https://www.cncf.io/certification/example"
+          name: "Level 5 Advanced Diploma in Financial Trading",
+          issuer: "Vocational Training Charitable Trust",
+          year: "2016",
         }
       ]
     },
-    awards: {
-      heading: "Awards & Recognition",
+    interests: {
+      heading: "Interests",
       items: [
         {
-          name: "Innovation Award",
-          year: "2021",
-          description: "Recognized for developing an AI-powered recommendation engine that increased customer engagement by 35%."
+          name: "Football",
+          description: "Arsenal fan. Retired from FPL after coming top 1% in the world."
         },
         {
-          name: "Outstanding Technical Leadership",
-          year: "2019",
-          description: "Awarded for leading a critical system migration with zero downtime while improving overall performance."
+          name: "Coding",
+          description: "Self-taught web dev during the lockdowns. Now freelance for small businesses and personal projects."
         },
         {
-          name: "Best Open Source Contribution",
-          year: "2017",
-          description: "Recognized for significant contributions to the development of a widely-used open source library."
-        }
+          name: "Video Games",
+          description: "Avid PC gamer!"
+        },
+        {
+          name: "CPD",
+          description: "Lifelong learner, currently pursuing further CII qualifications in insurance."
+        },
       ]
     },
     contact: {
       heading: "Contact Information",
-      email: "alex.morgan@example.com",
-      phone: "+1 (555) 123-4567",
-      location: "San Francisco, CA",
+      email: "oliver_turp@hotmail.co.uk",
+      location: "Hertfordshire, UK",
       links: [
         {
           type: "linkedin",
           name: "LinkedIn",
-          url: "https://www.linkedin.com/in/alexmorgan"
+          url: "https://www.linkedin.com/in/oliverturp314/"
         },
-        {
-          type: "github",
-          name: "GitHub",
-          url: "https://github.com/alexmorgan"
-        },
-        {
-          type: "twitter",
-          name: "Twitter",
-          url: "https://twitter.com/alexjmorgan"
-        },
-        {
-          type: "website",
-          name: "Personal Website",
-          url: "https://www.alexmorgan.dev"
-        }
       ]
     }
   }

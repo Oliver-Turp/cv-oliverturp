@@ -345,7 +345,7 @@
   }
 
     /* Show URLs in print for projects */
-  .section:first-child a::after {
+  .bold-header .section:first-child a::after {
     color: #ddd;
   }
 }
