@@ -1,5 +1,5 @@
 // app/api/print/route.js
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 import { NextResponse } from 'next/server';
 import { PDFDocument } from 'pdf-lib';
 import { content } from '../../../cv/content';
@@ -15,12 +15,14 @@ export async function GET(request) {
 
     // Launch browser
     browser = await puppeteer.launch({
+      executablePath: process.env.CHROME_EXECUTABLE_PATH,
       headless: 'new',
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
-        '--disable-gpu'
+        '--disable-gpu',
+        '--font-render-hinting=medium'
       ]
     });
 
@@ -54,12 +56,12 @@ export async function GET(request) {
 
     // Load PDF with pdf-lib to add metadata
     const pdfDoc = await PDFDocument.load(pdfBuffer);
-    
+
     // Set comprehensive metadata for ATS compliance
     pdfDoc.setTitle(`${content.name} - Curriculum Vitae`);
     pdfDoc.setAuthor(content.name);
     pdfDoc.setSubject(`Curriculum Vitae - ${content.title}`);
-    
+
     // Create keywords from title and common CV terms
     const keywords = [
       'CV',
@@ -69,7 +71,7 @@ export async function GET(request) {
       ...content.title.split('|').map(s => s.trim())
     ];
     pdfDoc.setKeywords(keywords);
-    
+
     pdfDoc.setProducer('Puppeteer + pdf-lib');
     pdfDoc.setCreator('Next.js CV Generator');
     pdfDoc.setCreationDate(new Date());
