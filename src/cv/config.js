@@ -6,6 +6,7 @@
 //     "education",
 //     "skills",
 //     "certifications",
+//     "interests",
 //     "contact"
 //   ]
 // };
@@ -19,6 +20,7 @@
 //     "education",
 //     "skills",
 //     "certifications",
+//     "interests"
 //   ]
 // };
 
@@ -30,6 +32,7 @@
 //     "education",
 //     "skills",
 //     "certifications",
+//     "interests",
 //     "contact"
 //   ]
 // };

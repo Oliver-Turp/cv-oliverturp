@@ -1,6 +1,7 @@
 // app/api/print/route.js
 import puppeteer from 'puppeteer';
 import { NextResponse } from 'next/server';
+import { PDFDocument } from 'pdf-lib';
 import { content } from '../../../cv/content';
 
 export async function GET(request) {
@@ -31,14 +32,12 @@ export async function GET(request) {
       timeout: 30000
     });
 
-    // Wait for fonts to load (modern approach)
+    // Wait for fonts to load
     await page.evaluateHandle('document.fonts.ready');
-    
-    // Give it a tiny bit more time for any final rendering
     await new Promise(resolve => setTimeout(resolve, 500));
 
-    // Generate PDF
-    const pdf = await page.pdf({
+    // Generate PDF from Puppeteer
+    const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
       margin: {
@@ -47,19 +46,46 @@ export async function GET(request) {
         left: '10mm',
         right: '10mm'
       },
-      preferCSSPageSize: false
+      preferCSSPageSize: false,
+      tagged: true
     });
 
     await browser.close();
 
-    // Create filename from name (replace spaces with underscores, remove special chars)
+    // Load PDF with pdf-lib to add metadata
+    const pdfDoc = await PDFDocument.load(pdfBuffer);
+    
+    // Set comprehensive metadata for ATS compliance
+    pdfDoc.setTitle(`${content.name} - Curriculum Vitae`);
+    pdfDoc.setAuthor(content.name);
+    pdfDoc.setSubject(`Curriculum Vitae - ${content.title}`);
+    
+    // Create keywords from title and common CV terms
+    const keywords = [
+      'CV',
+      'Resume',
+      'Curriculum Vitae',
+      content.name,
+      ...content.title.split('|').map(s => s.trim())
+    ];
+    pdfDoc.setKeywords(keywords);
+    
+    pdfDoc.setProducer('Puppeteer + pdf-lib');
+    pdfDoc.setCreator('Next.js CV Generator');
+    pdfDoc.setCreationDate(new Date());
+    pdfDoc.setModificationDate(new Date());
+
+    // Save the PDF with embedded metadata
+    const pdfWithMetadata = await pdfDoc.save();
+
+    // Create filename
     const sanitizedName = content.name
       .replace(/\s+/g, '_')
       .replace(/[^a-zA-Z0-9_-]/g, '');
     const filename = `${sanitizedName}_CV.pdf`;
 
     // Return PDF
-    return new NextResponse(pdf, {
+    return new NextResponse(pdfWithMetadata, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="${filename}"`
