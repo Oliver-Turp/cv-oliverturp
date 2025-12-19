@@ -25,6 +25,60 @@ p {
   left: -9999px;
 }
 
+/* ===== Fixed CV Header ===== */
+.cv-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.cv-header-inner {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+}
+
+.cv-header-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cv-header-button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Offset page content so CV is not hidden */
+body:has(.cv-header) {
+  padding-top: 56px;
+}
+
+/* Print view - hide header, optimize for PDF */
+.print-view {
+  padding-top: 0;
+}
+
+.print-view .cv-header {
+  display: none;
+}
+
 @media print {
   * {
     -webkit-print-color-adjust: exact;
@@ -57,5 +111,52 @@ p {
 
   .contact-link svg {
     display: none !important;
+  }
+
+  .print-view * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-view body {
+    padding-top: 0;
+    background: white;
+  }
+
+  .print-view .contact-link span:last-of-type {
+    display: none;
+  }
+
+  .print-view a::after {
+    content: " ("attr(href) ")";
+    font-size: 11px;
+    color: #666;
+    font-weight: normal;
+  }
+
+  .print-view .label {
+    position: static;
+    left: auto;
+    display: inline;
+    font-weight: bold;
+    margin-right: 4px;
+  }
+
+  .print-view svg,
+  .print-view .section.skills>div::before {
+    display: none !important;
+  }
+
+  .print-view .contact-link svg {
+    display: none !important;
+  }
+
+  /* Hide header in print */
+  .cv-header {
+    display: none;
+  }
+
+  body {
+    padding-top: 0;
   }
 }

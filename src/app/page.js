@@ -1,11 +1,15 @@
 // page.js
 import CV from "../cv/renderer/CV";
 import ErrorBoundary from "../cv/renderer/ErrorBoundary";
+import Header from "./components/Header";
 
 export default function Page() {
   return (
-    <ErrorBoundary>
-      <CV />
-    </ErrorBoundary>
+    <>
+      <Header />
+      <ErrorBoundary>
+        <CV />
+      </ErrorBoundary>
+    </>
   );
 }
