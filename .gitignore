@@ -42,5 +42,5 @@ yarn-error.log*
 next-env.d.ts
 
 # vps uses npm
-.pnpm-lock.yaml
+pnpm-lock.yaml
 pnpm-workspace.yaml
