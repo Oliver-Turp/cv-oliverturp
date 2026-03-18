@@ -8,10 +8,18 @@
     "start": "next start -p 3001",
     "lint": "eslint"
   },
+  "pnpm": {
+    "overrides": {
+      "basic-ftp": ">=5.2.0"
+    }
+  },
+  "overrides": {
+    "basic-ftp": ">=5.2.0"
+  },
   "dependencies": {
-    "next": "16.1.6",
+    "next": "16.1.7",
     "pdf-lib": "^1.17.1",
-    "puppeteer": "^24.36.1",
+    "puppeteer": "^24.39.1",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   }
