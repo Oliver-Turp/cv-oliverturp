@@ -14,8 +14,12 @@ const sans = Inter({
 });
 
 export const metadata = {
+    metadataBase: new URL("https://oliverturp.co.uk"),
     title: "Curriculum Vitae",
-    description: "The curriculum vitae of Oliver Turp, an Aggregation Analyst based in the UK."
+    description: "The curriculum vitae of Oliver Turp, an Aggregation Analyst based in the UK.",
+    alternates: {
+        canonical: "/",
+    },
 };
 
 export default function RootLayout({ children }) {
