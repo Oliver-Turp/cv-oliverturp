@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  serverExternalPackages: ['puppeteer', 'puppeteer-core'],
   async redirects() {
     return [
       { source: "/about", destination: "/", permanent: true },

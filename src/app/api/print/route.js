@@ -1,5 +1,6 @@
 // app/api/print/route.js
 import puppeteer from 'puppeteer';
+import { executablePath } from 'puppeteer';
 import { NextResponse } from 'next/server';
 import { PDFDocument } from 'pdf-lib';
 import { content } from '../../../cv/content';
@@ -15,7 +16,8 @@ export async function GET(request) {
 
     // Launch browser
     browser = await puppeteer.launch({
-      headless: 'new',
+      headless: true,
+      executablePath: executablePath(),
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',

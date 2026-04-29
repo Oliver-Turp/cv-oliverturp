@@ -4,7 +4,7 @@ export const content = {
   sections: {
     about: {
       heading: "Professional Summary",
-      content: "Detail-oriented insurance professional who supported underwriting, led data reporting, and ensured regulatory compliance within the Lloyd’s market. Background in civil engineering supports a logic-driven approach, with a track record of enhancing underwriting decision-making through Excel-based tools."
+      content: "Insurance professional with 3+ years in the Lloyd's market, delivering exposure management analysis and regulatory reporting within Energy while supporting underwriting operations. Engineering background provides a structured, quantitative approach to risk assessment and data-driven decision-making."
     },
     experience: {
       heading: "Work Experience",
@@ -13,19 +13,19 @@ export const content = {
           role: "Underwriting Assistant (additional duties)",
           company: "Aspen Insurance",
           years: "April 2025 - Present",
-          description: "- Support the Upstream Energy team by maintaining electronic submission files and ensuring audit readiness.\n- Process renewal slips in Wordsensa and conduct insured profile reviews using Dun & Bradstreet\n- Assist with ad hoc data tasks to improve workflow efficiency across the team."
+          description: "- Support the Upstream Energy team by maintaining electronic submission files and ensuring audit readiness.\n- Process renewal slips in Wordsensa and conduct insured profile reviews using Dun & Bradstreet\n- Attend broker-underwriter meetings, engaging in discussions on Upstream Energy risks.\n- Propose line percentages to underwriters at renewal, based on portfolio capacity and exposure constraints.\n- Assist with ad hoc data tasks to improve workflow efficiency across the team."
         },
         {
           role: "Aggregation Analyst",
           company: "Aspen Insurance",
           years: "December 2022 - Present",
-          description: "- Conduct exposure data entry and integrity checks using the Open Xposure system.\n- Produce monthly Lloyd's top exposure and movement analysis.\n- Deliver quarterly data correlations for internal Exposure Management.\n- Compile bi-annual Realistic Disaster Scenario (RDS) submissions in compliance with Lloyd's.\n- Analyse peak and live risk exposures to inform underwriting decisions.\n- Created Excel-based Gantt dashboard to visualise construction exposure, adopted by senior management."
+          description: "- Conduct exposure data entry and integrity checks using the Open Xposure system, ensuring portfolio accuracy and Lloyd's reporting compliance.\n- Produce monthly Lloyd's top exposure and movement analysis.\n- Deliver quarterly data correlations for internal Exposure Management, as sole analyst responsible for Upstream Energy data.\n- Compile bi-annual Realistic Disaster Scenario (RDS) submissions in compliance with Lloyd's.\n- Analyse peak and live risk exposures to inform underwriting decisions.\n- Created Excel-based Gantt dashboard to visualise construction exposure, adopted by senior management."
         },
         {
           role: "Grants & Programmes Intern",
           company: "Carer's Trust",
           years: "July 2022 - September 2022",
-          description: "\n- Redesigned the SharePoint intranet platform to improve navigation and access (UI/UX).\n- Proposed UX improvements in stakeholder meetings and built an offline draft environment.\n- Performed data cleaning and analysis on financial and grant data. \n- Supported event planning and managed aspects of grant distribution logistics."
+          description: "- Redesigned the SharePoint intranet platform to improve navigation and access (UI/UX).\n- Proposed UX improvements in stakeholder meetings and built an offline draft environment.\n- Performed data cleaning and analysis on financial and grant data. \n- Supported event planning and managed aspects of grant distribution logistics."
         },
         // {
         //   role: "Previous Experience",
@@ -64,7 +64,8 @@ export const content = {
             "Lloyd’s Market Compliance",
             "Underwriting Support",
             "Exposure Management",
-            "Insurance Administration",
+            "Energy Insurance",
+            "Risk Assessment",
           ]
         },
         {
@@ -74,7 +75,6 @@ export const content = {
             "Process Improvement",
             "Team Collaboration",
             "Stakeholder Communication",
-            "Organisational Efficiency"
           ]
         }
       ]
@@ -104,7 +104,7 @@ export const content = {
       items: [
         {
           name: "Football",
-          description: "Arsenal fan. Retired from FPL after coming top 1% in the world."
+          description: "Arsenal fan. Retired from FPL after finishing in the top 1% worldwide."
         },
         {
           name: "Coding",
@@ -112,7 +112,7 @@ export const content = {
         },
         {
           name: "Video Games",
-          description: "Avid PC gamer!"
+          description: "Avid PC gamer across strategy, simulation, and sports genres."
         }
       ]
     },
