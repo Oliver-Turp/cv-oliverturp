@@ -11,18 +11,18 @@
 //   ]
 // };
 
-// export const config = {
-//   theme: "bold-header",
-//   sectionOrder: [
-//     "contact",
-//     "about",
-//     "experience",
-//     "education",
-//     "skills",
-//     "certifications",
-//     "interests"
-//   ]
-// };
+export const config = {
+  theme: "bold-header",
+  sectionOrder: [
+    "contact",
+    "about",
+    "experience",
+    "education",
+    "skills",
+    "certifications",
+    "interests"
+  ]
+};
 
 // export const config = {
 //   theme: "visual-timeline",
@@ -37,21 +37,21 @@
 //   ]
 // };
 
-export const config = {
-  theme: "modern-professional",
+// export const config = {
+//   theme: "modern-professional",
 
-  // Two-column layout config (replaces sectionOrder for this theme)
-  columns: {
-    sidebar: ["contact", "skills", "education", "certifications"],
-    main: ["about", "experience", "interests"],
-    mobile: [
-      "about",
-      "experience",
-      "education",
-      "skills",
-      "certifications",
-      "interests",
-      "contact"
-    ]
-  }
-};
+//   // Two-column layout config (replaces sectionOrder for this theme)
+//   columns: {
+//     sidebar: ["contact", "skills", "education", "certifications"],
+//     main: ["about", "experience", "interests"],
+//     mobile: [
+//       "about",
+//       "experience",
+//       "education",
+//       "skills",
+//       "certifications",
+//       "interests",
+//       "contact"
+//     ]
+//   }
+// };

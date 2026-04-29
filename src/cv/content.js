@@ -21,12 +21,12 @@ export const content = {
           years: "December 2022 - Present",
           description: "- Conduct exposure data entry and integrity checks using the Open Xposure system, ensuring portfolio accuracy and Lloyd's reporting compliance.\n- Produce monthly Lloyd's top exposure and movement analysis.\n- Deliver quarterly data correlations for internal Exposure Management, as sole analyst responsible for Upstream Energy data.\n- Compile bi-annual Realistic Disaster Scenario (RDS) submissions in compliance with Lloyd's.\n- Analyse peak and live risk exposures to inform underwriting decisions.\n- Created Excel-based Gantt dashboard to visualise construction exposure, adopted by senior management."
         },
-        {
-          role: "Grants & Programmes Intern",
-          company: "Carer's Trust",
-          years: "July 2022 - September 2022",
-          description: "- Redesigned the SharePoint intranet platform to improve navigation and access (UI/UX).\n- Proposed UX improvements in stakeholder meetings and built an offline draft environment.\n- Performed data cleaning and analysis on financial and grant data. \n- Supported event planning and managed aspects of grant distribution logistics."
-        },
+        // {
+        //   role: "Grants & Programmes Intern",
+        //   company: "Carer's Trust",
+        //   years: "July 2022 - September 2022",
+        //   description: "- Redesigned the SharePoint intranet platform to improve navigation and access (UI/UX).\n- Proposed UX improvements in stakeholder meetings and built an offline draft environment.\n- Performed data cleaning and analysis on financial and grant data. \n- Supported event planning and managed aspects of grant distribution logistics."
+        // },
         // {
         //   role: "Previous Experience",
         //   company: "Various Roles",
