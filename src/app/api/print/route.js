@@ -1,9 +1,68 @@
 // app/api/print/route.js
+import fs from 'fs';
 import puppeteer from 'puppeteer';
 import { executablePath } from 'puppeteer';
 import { NextResponse } from 'next/server';
 import { PDFDocument } from 'pdf-lib';
 import { content } from '../../../cv/content';
+
+const PDF_LAUNCH_ARGS = [
+  '--no-sandbox',
+  '--disable-setuid-sandbox',
+  '--disable-dev-shm-usage',
+  '--disable-gpu',
+  '--font-render-hinting=medium'
+];
+
+/**
+ * @param {string} resolvedExe
+ * @param {boolean} exeExists
+ * @param {string | undefined} envExe
+ * @param {boolean} envExeOk
+ */
+async function launchPuppeteerForPdf(resolvedExe, exeExists, envExe, envExeOk) {
+  if (envExeOk && envExe) {
+    return puppeteer.launch({
+      headless: true,
+      executablePath: envExe,
+      args: PDF_LAUNCH_ARGS
+    });
+  }
+
+  // win32: bundled chrome.exe often exists (existsSync true) but spawn fails with UNKNOWN (-4094).
+  if (process.platform === 'win32') {
+    try {
+      return puppeteer.launch({
+        headless: true,
+        channel: 'chrome',
+        args: PDF_LAUNCH_ARGS
+      });
+    } catch (chanErr) {
+      if (exeExists) {
+        return puppeteer.launch({
+          headless: true,
+          executablePath: resolvedExe,
+          args: PDF_LAUNCH_ARGS
+        });
+      }
+      throw chanErr;
+    }
+  }
+
+  if (exeExists) {
+    return puppeteer.launch({
+      headless: true,
+      executablePath: resolvedExe,
+      args: PDF_LAUNCH_ARGS
+    });
+  }
+
+  return puppeteer.launch({
+    headless: true,
+    channel: 'chrome',
+    args: PDF_LAUNCH_ARGS
+  });
+}
 
 export async function GET(request) {
   let browser;
@@ -12,20 +71,21 @@ export async function GET(request) {
     // Get the base URL from the request
     const protocol = request.headers.get('x-forwarded-proto') || 'http';
     const host = request.headers.get('host');
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`;
+    const baseUrl = (
+      process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`
+    ).replace(/\/+$/, '');
 
-    // Launch browser
-    browser = await puppeteer.launch({
-      headless: true,
-      executablePath: executablePath(),
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-gpu',
-        '--font-render-hinting=medium'
-      ]
-    });
+    const resolvedExe = executablePath();
+    const exeExists = fs.existsSync(resolvedExe);
+    const envExe = process.env.PUPPETEER_EXECUTABLE_PATH;
+    const envExeOk = Boolean(envExe && fs.existsSync(envExe));
+
+    browser = await launchPuppeteerForPdf(
+      resolvedExe,
+      exeExists,
+      envExe,
+      envExeOk
+    );
 
     const page = await browser.newPage();
 
@@ -94,7 +154,6 @@ export async function GET(request) {
         'Content-Disposition': `attachment; filename="${filename}"`
       }
     });
-
   } catch (error) {
     console.error('PDF generation error:', error);
 
