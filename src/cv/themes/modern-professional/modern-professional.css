@@ -254,6 +254,14 @@
   border-bottom-color: #1a1a1a;
 }
 
+.modern-professional .content.desktop .main-content .section>div strong {
+  font-size: 16px;
+}
+
+.modern-professional .content.desktop .main-content .section span {
+  font-size: 14px;
+}
+
 /* ===== Mobile Layout (Single Column) ===== */
 
 .modern-professional .content.mobile {
@@ -399,11 +407,22 @@
     flex-direction: column;
   }
 
+  /* ===== Tightened header ===== */
   .modern-professional .header {
-    padding: 30px 40px 20px;
+    padding: 16px 40px 14px;
     border-bottom: 2px solid #1a1a1a;
   }
 
+  .modern-professional .header h1 {
+    font-size: 28px;
+  }
+
+  .modern-professional .header h2 {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  /* ===== Two-column layout ===== */
   .modern-professional .content.desktop {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -420,7 +439,8 @@
   }
 
   .modern-professional .content.desktop .sidebar .section {
-    padding: 20px 24px;
+    padding: 16px 20px;
+    padding-bottom: 6px;
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -430,57 +450,26 @@
     color: white;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    margin-left: -24px;
-    margin-right: -24px;
-    margin-top: -20px;
-    margin-bottom: 16px;
-    padding: 10px 16px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -16px;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    font-size: 11px;
   }
 
-  .modern-professional .content.desktop .main-content {
-    padding: 24px 32px 32px;
-  }
-
-  .modern-professional .content.desktop .main-content .section {
-    margin-bottom: 20px;
-  }
-
-  .modern-professional .content.desktop .main-content .section h3 {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  .modern-professional .content.desktop .main-content .section h3+* {
-    break-before: avoid;
-    page-break-before: avoid;
-  }
-
-  .modern-professional .content.desktop .main-content .section>div {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-bottom: 16px;
-  }
-
-  .modern-professional .content.desktop .main-content .section:last-child {
-    flex: 1;
-  }
-
-  .modern-professional .content.desktop .main-content p {
-    line-height: 1.5;
-  }
-
-  .modern-professional a {
-    text-decoration: none;
-    color: inherit;
-  }
-
+  /* ===== Sidebar contact ===== */
   .modern-professional .content.desktop .sidebar .section>div {
-    margin-bottom: 8px;
+    margin-bottom: 6px !important;
+  }
+
+  .modern-professional .content.desktop .sidebar .section>div:last-child {
+    margin-bottom: 0 !important;
   }
 
   .modern-professional .content.desktop .sidebar .contact-row,
   .modern-professional .content.desktop .sidebar .contact-link {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     font-size: 12px;
   }
 
@@ -506,13 +495,133 @@
     print-color-adjust: exact;
   }
 
+  /* ===== Tightened main content ===== */
+  .modern-professional .content.desktop .main-content {
+    padding: 16px 28px 24px;
+  }
+
+  /* ===== Section spacing ===== */
+  .modern-professional .content.desktop .main-content .section {
+    margin-bottom: 14px !important;
+  }
+
+  /* ===== Section headings ===== */
+  .modern-professional .content.desktop .main-content .section h3 {
+    font-size: 13px;
+    margin: 0 0 8px 0 !important;
+    padding-bottom: 4px !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .modern-professional .content.desktop .main-content .section h3+* {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* ===== Experience/Education item spacing ===== */
+  .modern-professional .content.desktop .main-content .section>div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 10px !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section>div:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* ===== Typography ===== */
+  .modern-professional .content.desktop .main-content .section>p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 0 6px !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .modern-professional .content.desktop .main-content .section p:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section>div>p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 3px 0 0 0;
+  }
+
+  .modern-professional .content.desktop .main-content .section>div>span>strong {
+    font-size: 14px;
+  }
+
+  .modern-professional .content.desktop .main-content .section>div>div[style*="color"] {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  /* ===== Last section fill ===== */
+  .modern-professional .content.desktop .main-content .section:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0 !important;
+  }
+
+  .modern-professional a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .modern-professional .content.desktop .main-content .section.skills span {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .modern-professional .content.desktop .sidebar .section.skills span,
+  .modern-professional .content.desktop .sidebar .section.skills span span,
+  .modern-professional .content.desktop .sidebar .section.education span,
+  .modern-professional .content.desktop .sidebar .section.education span span,
+  .modern-professional .content.desktop .sidebar .section.certifications span,
+  .modern-professional .content.desktop .sidebar .section.certifications span span,
+  .modern-professional .content.desktop .sidebar .section.awards span,
+  .modern-professional .content.desktop .sidebar .section.awards span span,
+  .modern-professional .content.desktop .sidebar .section.projects span,
+  .modern-professional .content.desktop .sidebar .section.projects span span,
+  .modern-professional .content.desktop .sidebar .section.publications span,
+  .modern-professional .content.desktop .sidebar .section.publications span span {
+    font-size: 13px !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section.skills>div {
+    margin-bottom: 6px !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section.skills>div:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section.certifications>div {
+    margin-bottom: 8px !important;
+  }
+
+  .modern-professional .content.desktop .main-content .section.certifications>div:last-child {
+    margin-bottom: 0 !important;
+  }
+
   /* Hide mobile layout in print */
   .modern-professional .content.mobile {
     display: none;
   }
-    .modern-professional .content.desktop {
+
+  .modern-professional .content.desktop {
     display: grid;
     grid-template-columns: 280px 1fr;
     flex: 1;
+  }
+
+  .modern-professional .sidebar .contact-details {
+    gap: 6px !important;
   }
 }

@@ -1,6 +1,6 @@
 export default function Awards({ heading, data }) {
   return (
-    <section className="section">
+    <section className="section awards">
       <h3>{heading}</h3>
 
       {data.items.map((award, index) => (

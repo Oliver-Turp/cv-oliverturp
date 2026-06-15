@@ -1,6 +1,6 @@
 export default function Education({ heading, data }) {
   return (
-    <section className="section">
+    <section className="section education">
       <h3>{heading}</h3>
 
       {data.items.map((edu, index) => (

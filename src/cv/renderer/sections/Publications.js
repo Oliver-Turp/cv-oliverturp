@@ -1,6 +1,6 @@
 export default function Publications({ heading, data }) {
   return (
-    <section className="section">
+    <section className="section publications">
       <h3>{heading}</h3>
 
       {data.items.map((pub, index) => (
@@ -11,7 +11,7 @@ export default function Publications({ heading, data }) {
             </a>
           </strong>
           <div style={{ fontSize: "14px", color: "#666", marginTop: "4px" }}>
-            {pub.publisher} • {pub.year}
+            {pub.publisher} | {pub.year}
           </div>
         </div>
       ))}
