@@ -20,7 +20,7 @@ export const config = {
     "education",
     "skills",
     "certifications",
-    "interests"
+    // "interests"
   ]
 };
 

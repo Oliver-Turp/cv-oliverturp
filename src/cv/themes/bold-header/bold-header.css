@@ -78,7 +78,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-.bold-header .section > p {
+.bold-header .section>p {
   margin: 0 0 12px;
   line-height: 1.6;
   font-size: 15px;
@@ -230,6 +230,7 @@
 /* ===== Print Styles ===== */
 
 @media print {
+
   html:has(.bold-header),
   body:has(.bold-header) {
     height: 100%;
@@ -249,64 +250,45 @@
     flex-direction: column;
   }
 
+  /* ===== Tightened header ===== */
   .bold-header .header {
     background: #1a1a1a;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    padding: 30px 40px 24px;
-    margin-bottom: 0;
+    padding: 16px 40px 16px;
   }
 
+  .bold-header .header h1 {
+    font-size: 32px;
+    padding-bottom: 8px;
+  }
+
+  .bold-header .header h2 {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+  }
+
+  /* ===== Tightened content ===== */
   .bold-header .content {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 0 40px 40px;
+    padding: 0 40px 20px;
   }
 
+  /* ===== Contact section — restore grid in print ===== */
   .bold-header .section:first-child {
     background: #4a4a4a;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    margin: 0 -40px 20px -40px;
-    padding: 24px 40px 24px 40px;
+    margin: 0 -40px 16px -40px;
+    padding: 16px 40px;
   }
 
-  .bold-header .section {
-    margin-bottom: 20px;
-  }
-
-  /* Prevent headers from being separated from their content */
-  .bold-header .section h3 {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  /* Keep section heading with first item */
-  .bold-header .section h3+* {
-    break-before: avoid;
-    page-break-before: avoid;
-  }
-
-  /* Make the last section stretch to fill remaining space */
-  .bold-header .section:last-child {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Tighter typography for print */
-  .bold-header .section p {
-    line-height: 1.5;
-  }
-
-  .bold-header a {
-    text-decoration: none;
-  }
-
-  /* Stack contact info vertically in print */
   .bold-header .section:first-child .contact-details {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 24px;
     margin-bottom: 0;
   }
 
@@ -314,7 +296,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 6px;
+    margin-bottom: 0;
   }
 
   .bold-header .section:first-child .contact-row svg {
@@ -324,15 +306,17 @@
   }
 
   .bold-header .section:first-child .contact-links {
-    display: block;
-    margin-top: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 24px;
+    margin-top: 4px;
   }
 
   .bold-header .section:first-child .contact-link {
     display: flex;
     align-items: center;
     gap: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 0;
     text-decoration: none;
     break-inside: avoid;
     page-break-inside: avoid;
@@ -344,8 +328,94 @@
     height: 14px;
   }
 
-    /* Show URLs in print for projects */
   .bold-header .section:first-child a::after {
     color: #ddd;
+  }
+
+  /* ===== Section spacing ===== */
+  .bold-header .section {
+    margin-bottom: 14px !important;
+  }
+
+  /* ===== Section headings ===== */
+  .bold-header .section h3 {
+    font-size: 14px;
+    margin: 0 0 8px 0 !important;
+    padding-bottom: 4px !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .bold-header .section h3+* {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  /* ===== Experience/Education item spacing ===== */
+  .bold-header .section>div {
+    margin-bottom: 10px !important;
+  }
+
+  .bold-header .section>div:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* ===== Typography ===== */
+  .bold-header .section>p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 0 8px !important;
+  }
+
+  .bold-header .section p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .bold-header .section p:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  .bold-header .section>div>p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 4px 0 0 0;
+  }
+
+  .bold-header .section>div strong {
+    font-size: 14px;
+  }
+
+  /* ===== Last section fill ===== */
+  .bold-header .section:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0 !important;
+  }
+
+  .bold-header a {
+    text-decoration: none;
+  }
+
+  .bold-header .section.skills span {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .bold-header .section.skills>div {
+    margin-bottom: 6px !important;
+  }
+
+  .bold-header .section.skills>div:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .bold-header .section.certifications>div {
+    margin-bottom: 8px !important;
+  }
+
+  .bold-header .section.certifications>div:last-child {
+    margin-bottom: 0 !important;
   }
 }

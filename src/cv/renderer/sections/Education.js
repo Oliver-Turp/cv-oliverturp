@@ -5,8 +5,10 @@ export default function Education({ heading, data }) {
 
       {data.items.map((edu, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
-          <strong>{edu.degree}</strong> — {edu.institution}
-          <div style={{ fontSize: "14px", color: "#666" }}>{edu.years}</div>
+          <span>
+            <strong>{edu.degree}</strong> — {edu.institution}
+            <span style={{ fontSize: "14px", color: "#666" }}> | {edu.years}</span>
+          </span>
           <p>{edu.description}</p>
         </div>
       ))}
