@@ -14,8 +14,8 @@ export default function Certifications({ heading, data }) {
               ) : (
                 cert.name
               )}
-            </strong>
-            <span style={{ fontSize: "13px", color: "#666" }}> • {cert.issuer} • {cert.year}</span>
+            </strong> — {cert.issuer}
+            <span style={{ fontSize: "14px", color: "#666" }}> | {cert.year}</span>
           </span>
         </div>
       ))}

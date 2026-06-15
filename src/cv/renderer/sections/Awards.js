@@ -4,14 +4,12 @@ export default function Awards({ heading, data }) {
       <h3>{heading}</h3>
 
       {data.items.map((award, index) => (
-        <div key={index} style={{ marginBottom: "20px" }}>
-          <strong>{award.name}</strong>
-          <div style={{ fontSize: "14px", color: "#666", marginTop: "4px" }}>
-            {award.year}
-          </div>
-          {award.description && (
-            <p style={{ marginTop: "8px" }}>{award.description}</p>
-          )}
+        <div key={index} style={{ marginBottom: "16px" }}>
+          <span>
+            <strong>{award.name}</strong>
+            {award.description && <span> — {award.description}</span>}
+            <span style={{ fontSize: "14px", color: "#666" }}> | {award.year}</span>
+          </span>
         </div>
       ))}
     </section>

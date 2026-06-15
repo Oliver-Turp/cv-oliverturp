@@ -8,8 +8,8 @@ export default function Education({ heading, data }) {
           <span>
             <strong>{edu.degree}</strong> — {edu.institution}
             <span style={{ fontSize: "14px", color: "#666" }}> | {edu.years}</span>
+            {edu.description && <span style={{ color: "#444" }}> — {edu.description}</span>}
           </span>
-          <p>{edu.description}</p>
         </div>
       ))}
     </section>

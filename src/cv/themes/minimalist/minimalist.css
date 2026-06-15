@@ -12,7 +12,6 @@
 .minimalist .header {
   text-align: center;
   margin-bottom: 48px;
-  padding-bottom: 24px;
 }
 
 .minimalist .header h1 {
@@ -33,7 +32,7 @@
 /* ===== Sections ===== */
 
 .minimalist .section {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .minimalist .section h3 {
@@ -50,7 +49,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .minimalist .contact-row {
@@ -64,7 +63,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px 16px;
-  margin-top: 8px;
 }
 
 .minimalist .contact-link {
@@ -78,6 +76,14 @@
 
 .minimalist .contact-link:hover {
   border-bottom-color: #aaa;
+}
+
+.minimalist .section>div strong {
+  font-size: 16px;
+}
+
+.minimalist .section span {
+  font-size: 14px;
 }
 
 
@@ -128,43 +134,88 @@
     max-width: none;
     min-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 24px 40px;
     background: white;
     display: flex;
     flex-direction: column;
   }
 
+  /* ===== Header ===== */
   .minimalist .header {
-    margin-bottom: 0px;
+    margin-bottom: 12px !important;
+    padding-bottom: 0;
   }
 
+  .minimalist .header h1 {
+    font-size: 28px;
+  }
+
+  .minimalist .header h2 {
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  /* ===== Content ===== */
   .minimalist .content {
     display: flex;
     flex-direction: column;
     flex: 1;
   }
 
+  /* ===== Sections ===== */
   .minimalist .section {
-    margin-bottom: 0;
+    margin-bottom: 12px !important;
   }
 
-  /* Prevent headers from being separated from their content */
   .minimalist .section h3 {
+    font-size: 16px;
+    margin: 0 0 8px !important;
+    padding-bottom: 4px;
     break-after: avoid;
     page-break-after: avoid;
   }
 
-  /* Keep small items together */
   .minimalist .section h3+* {
     break-before: avoid;
     page-break-before: avoid;
   }
 
-  /* Make the last section stretch to fill remaining space */
+  /* ===== Item spacing ===== */
+  .minimalist .section>div {
+    margin-bottom: 8px !important;
+  }
+
+  .minimalist .section>div:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* ===== Typography ===== */
+  .minimalist .section p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .minimalist .section>p {
+    margin: 0 0 6px !important;
+  }
+
+  .minimalist .section p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .minimalist .section>div>p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 3px 0 0 0;
+  }
+
+  /* ===== Last section fill ===== */
   .minimalist .section:last-child {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0 !important;
   }
 
   .minimalist a {
@@ -172,34 +223,36 @@
     color: black;
   }
 
-  /* Optional: slightly tighter typography for print */
-  /* .minimalist p {
-    line-height: 1.45;
-  } */
-
-  /* Stack links vertically in print */
-  .minimalist .contact-links {
-    display: block;
+  .minimalist .section span {
+    font-size: 14px;
+    line-height: 1.4;
   }
 
-  /* Remove extra gap between contact details and links */
-  .minimalist .contact-details {
-    margin-bottom: 0px;
+  /* ===== Contact ===== */
+  .minimalist .content .contact-details {
+    gap: 4px;
+    margin-bottom: 4px !important;
   }
 
-  .minimalist .contact-link {
+  .minimalist .content .contact-row {
+    font-size: 13px;
+  }
+
+  .minimalist .content .contact-links {
     display: block;
-    margin-top: 0;
-    /* each link on its own line */
-    margin-bottom: 6px;
+    margin-top: 0 !important;
+  }
+
+  .minimalist .content .contact-link {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 3px;
     text-decoration: none;
     break-inside: avoid;
-    /* keep label + url together */
     page-break-inside: avoid;
   }
 
-  /* Icons are decorative in print */
-  .minimalist .contact-link svg {
+  .minimalist .content .contact-link svg {
     display: none;
   }
 }
