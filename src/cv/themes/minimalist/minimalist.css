@@ -37,7 +37,7 @@
 
 .minimalist .section h3 {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 16px;
   padding-bottom: 6px;
   border-bottom: 1px solid #ddd;
@@ -79,7 +79,7 @@
 }
 
 .minimalist .section>div strong {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .minimalist .section span {

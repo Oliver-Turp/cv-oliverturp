@@ -4,7 +4,7 @@ export default function Interests({ heading, data }) {
             <h3>{heading}</h3>
 
             {data.items.map((interest, index) => (
-                <div key={index}>
+                <div key={index} style={{ marginBottom: "16px" }}>
 
                     {interest.description.split('\n').map((line, i) =>
                         line.startsWith('-') ? (
