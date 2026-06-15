@@ -71,11 +71,13 @@ export async function GET(request) {
     // Get the base URL from the request
     const protocol = request.headers.get('x-forwarded-proto') || 'http';
     const host = request.headers.get('host');
+    const requestBaseUrl = host ? `${protocol}://${host}` : null;
     const baseUrl = (
-      process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`
+      requestBaseUrl ||
+      process.env.NEXT_PUBLIC_BASE_URL
     ).replace(/\/+$/, '');
 
-    const resolvedExe = executablePath();
+    const resolvedExe = await executablePath();
     const exeExists = fs.existsSync(resolvedExe);
     const envExe = process.env.PUPPETEER_EXECUTABLE_PATH;
     const envExeOk = Boolean(envExe && fs.existsSync(envExe));
