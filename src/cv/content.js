@@ -4,7 +4,7 @@ export const content = {
   sections: {
     about: {
       heading: "Professional Summary",
-      content: "Insurance professional with 3+ years in the Lloyd's market, specialising in Upstream Energy aggregation analysis and regulatory reporting within frameworks including Open Xposure and Realistic Disaster Scenarios. CII-qualified with additional underwriting support experience, combining an engineering-led approach to data integrity with direct exposure to risk placement and portfolio decision-making."
+      content: "Insurance professional with 3+ years in the Lloyd's market, specialising in Upstream Energy aggregation and accumulation analysis, monitoring portfolio exposure against risk appetite and producing Lloyd's regulatory returns (including RDS) via Open Xposure. CII-qualified with additional underwriting support experience, with direct exposure to risk placement and portfolio decision-making."
     },
     experience: {
       heading: "Work Experience",
@@ -19,7 +19,7 @@ export const content = {
           role: "Aggregation Analyst",
           company: "Aspen Insurance",
           years: "December 2022 - Present",
-          description: "- Maintain data integrity across the Open Xposure system through rigorous entry validation, ensuring portfolio accuracy and Lloyd's reporting compliance.\n- Produce monthly Lloyd's top exposure and movement analysis.\n- Own quarterly data correlations for internal Exposure Management as the sole analyst responsible for the Upstream Energy data set.\n- Produce bi-annual Realistic Disaster Scenario (RDS) submissions in accordance with Lloyd's regulatory requirements.\n- Analyse peak and live risk exposures to inform underwriting decisions.\n- Developed an Excel-based Gantt dashboard to visualise construction exposure timelines, subsequently adopted by senior management as a portfolio monitoring tool."
+          description: "- Maintain data integrity across the Open Xposure system through rigorous entry validation, ensuring portfolio accuracy and Lloyd's reporting compliance.\n\n- Produce monthly Lloyd's top exposure and movement analysis.\n- Own quarterly data correlations for internal Exposure Management as the sole analyst responsible for the Upstream Energy data set.\n- Produce bi-annual Realistic Disaster Scenario (RDS) submissions in accordance with Lloyd's regulatory requirements.\n- Analyse peak and live accumulation against risk appetite to inform underwriting decisions.\n- Developed an Excel-based Gantt dashboard to visualise construction exposure timelines, subsequently adopted by senior management as a portfolio monitoring tool."
         },
       ]
     },
