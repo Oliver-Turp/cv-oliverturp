@@ -110,7 +110,7 @@ export const content = {
     contact: {
       heading: "Contact Information",
       email: "oliver_turp@hotmail.co.uk",
-      location: "Hertfordshire, UK",
+      location: "Bedfordshire, UK",
       links: [
         {
           type: "linkedin",
