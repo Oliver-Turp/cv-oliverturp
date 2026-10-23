@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "next build",
+    "build": "puppeteer browsers install chrome && next build && node scripts/check-chrome-cache.mjs",
+    "clean-browsers": "puppeteer browsers clear && puppeteer browsers install chrome",
     "start": "next start -p 3001",
     "lint": "eslint"
   },
